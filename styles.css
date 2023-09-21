@@ -9,7 +9,7 @@ body {
 h1 {
     font-size: 3rem;
     letter-spacing: .15em;
-    border: 2px solid black;
+    border: 4px solid black;
     padding: .5em .75em;
     width: 45vw;
     min-width: 300px;
@@ -18,14 +18,50 @@ h1 {
     margin: 20px auto;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .h1-highlight {
     color: #333;
 }
 
 main {
     display: flex;
+}
+
+main#home {
     flex-direction: column;
     align-items: center;
+}
+
+main#recipe {
+    flex-direction: row;
+}
+
+main#recipe div {
+    padding: 20px 10px;
+}
+
+main#recipe h2, main#recipe h3 {
+    color: red;
+}
+
+.ingredients {
+    flex: 2 1 auto;
+}
+
+.ingredients li {
+    margin-bottom: 5px;
+}
+
+.instructions {
+    flex: 2 1 auto;
+}
+
+.instructions li {
+    margin-bottom: 15px;
 }
 
 .menu-block {
@@ -50,6 +86,16 @@ main {
 
 .menu-block:hover h2 {
     color: #fff;
+}
+
+.menu-block:hover .link-text {
+    font-size: 1.25em;
+    transition: all 1s;
+}
+
+.menu-block:hover img {
+    width: 250px;
+    transition: all 1s;
 }
 
 .right-header h2 {
@@ -96,6 +142,11 @@ main {
     transition: all .75s;
 }
 
+.recipe-btn {
+    left: auto;
+    right: 40px;
+}
+
 .show {
     opacity: 100%;
 }
@@ -103,4 +154,22 @@ main {
 .top-btn p:first-of-type {
     font-size: 2.5em;
     margin: -15px;
+}
+
+.recipe-header-box {
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    min-width: 700px;
+    margin: 0 auto;
+    border: 2px solid black;
+    align-items: center;
+}
+
+.recipe-header-box img {
+    border-right: 2px solid black;
+}
+
+.recipe-header-box > * {
+    padding: 10px;
 }
